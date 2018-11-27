@@ -1,0 +1,707 @@
+@font-face {
+  font-family: Vegur;
+  src: url(fonts/Vegur-Regular.otf);
+}
+@font-face {
+  font-family: VegurBold;
+  src: url(fonts/Vegur-Bold.otf);
+}
+@font-face {
+  font-family: VegurLight;
+  src: url(fonts/Vegur-Light.otf);
+}
+body {
+  background-color: #555;
+  font-family: "VegurLight";
+  counter-reset: page;
+  margin: 0;
+}
+body,
+table {
+  font-size: 10pt;
+}
+p {
+  line-height: 135%;
+  margin-top: 0.2cm;
+  margin-bottom: 0.2cm;
+}
+b {
+  font-family: "VegurBold";
+  font-weight: normal;
+}
+h1 {
+  font-size: 14pt;
+  font-weight: normal;
+  font-family: "VegurBold";
+}
+h2 {
+  font-family: "VegurBold";
+  font-weight: normal;
+  margin-bottom: 0.1cm;
+  font-size: 20pt;
+}
+h3 {
+  color: #009ee3;
+  font-family: "VegurBold";
+  font-weight: normal;
+  font-size: 14pt;
+}
+h3 .subtitle {
+  font-family: "VegurLight";
+  font-size: 14pt;
+}
+@media only screen and (max-width: 767px) {
+  h3 .subtitle {
+    font-size: 10pt;
+  }
+}
+h4 {
+  font-family: "VegurBold";
+  font-weight: normal;
+  font-size: 10pt;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.subtitle {
+  font-family: "VegurLight";
+  font-size: 18pt;
+  margin-bottom: 0.7cm;
+}
+.page {
+  width: 210mm;
+  height: 297mm;
+  background-color: white;
+  margin-top: 1cm;
+  margin-bottom: 1cm;
+  position: relative;
+  box-sizing: border-box;
+  padding: 2cm 2cm 2cm 2cm;
+  overflow: hidden;
+}
+.page.narrow {
+  padding-right: 6.5cm;
+}
+.page div.narrow {
+  padding-right: 4.5cm;
+}
+.page.blank {
+  background-color: #46618A;
+}
+.onepage,
+.twopage {
+  width: 210mm;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page.cover-page {
+  padding: 0;
+}
+.page.cover-page img.logo {
+  position: absolute;
+  top: 4%;
+  left: 30%;
+  width: 27%;
+}
+.page.cover-page h1 {
+  position: absolute;
+  top: 5.5cm;
+  left: 2cm;
+  padding-right: 4cm;
+}
+.page.cover-page h1 .title {
+  color: #009ee3;
+  padding-left: 5pt;
+}
+@media only screen and (max-width: 230mm) {
+  .page.cover-page {
+    padding: 0;
+  }
+  .page.cover-page > .background {
+    position: relative;
+    height: initial;
+  }
+}
+.page.contents {
+  background-image: url("img/2-bg.png");
+  background-size: 100% auto;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+.page.contents h1 {
+  color: #000;
+  margin-left: 4.5cm;
+  margin-top: 1cm;
+  margin-bottom: 1.5cm;
+  font-size: 20pt;
+}
+@media only screen and (max-width: 767px) {
+  .page.contents {
+    padding: 1cm 1cm;
+  }
+  .page.contents h1 {
+    margin: 1cm 0 1cm 0;
+    text-align: center;
+  }
+}
+.page.contents div.toc {
+  box-sizing: border-box;
+  background: rgba(4, 18, 60, 0.73);
+  padding: 0.5cm 1cm 1cm 3cm;
+  width: 12cm;
+  margin-left: 4.5cm;
+}
+.page.contents div.toc a {
+  text-decoration: none;
+  color: inherit;
+}
+.page.contents div.toc a:hover {
+  text-decoration: underline;
+}
+@media only screen and (max-width: 767px) {
+  .page.contents div.toc {
+    margin-left: 0;
+    width: initial;
+    padding: 0.5cm;
+  }
+}
+.page.contents div.toc table {
+  color: white;
+  font-family: VegurBold;
+}
+.page.contents div.toc table td {
+  vertical-align: top;
+  padding: 0.05cm 0.3cm;
+  line-height: 150%;
+}
+.page.contents div.toc table tr td:first-child {
+  text-align: right;
+}
+.page.intro {
+  padding-top: 5cm;
+}
+@media only screen and (max-width: 230mm) {
+  .page.intro {
+    padding-top: 1cm;
+  }
+}
+.page.intro h1 {
+  font-size: 20pt;
+  color: #46618A;
+}
+.page.intro .body {
+  margin-left: 4cm;
+}
+@media only screen and (max-width: 230mm) {
+  .page.intro .body {
+    margin-left: inherit;
+  }
+}
+.page.intro .body > p {
+  font-size: 10.5pt;
+}
+.page.intro .sidebar {
+  font-size: 17pt;
+  font-family: Vegur;
+  color: #009ee3;
+  float: left;
+  width: 11.8cm;
+  margin-left: -4cm;
+  padding-right: 0.2cm;
+}
+.page.intro .sidebar h2 {
+  margin-top: -3pt;
+  font-size: 18pt;
+  line-height: 150%;
+}
+.page.intro .sidebar p {
+  margin: 0;
+  line-height: 150%;
+}
+@media only screen and (max-width: 230mm) {
+  .page.intro .sidebar {
+    float: none;
+    width: 100%;
+    margin-left: inherit;
+    padding-right: inherit;
+  }
+}
+.page.page-38 {
+  padding: 0;
+  display: inline-block;
+}
+.page.page-38 div.main {
+  position: absolute;
+  left: 20%;
+  width: 60%;
+  top: 25%;
+  z-index: 0;
+}
+.page.page-38 div.main img.main {
+  width: 100%;
+  z-index: 10;
+}
+.page.page-38 div.main img.side {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+}
+.page.page-38 div.main img.left-shadow {
+  bottom: 0;
+  height: 120%;
+  transform: translate(-53%, 9%);
+  position: absolute;
+  z-index: -5;
+}
+.page.page-38 div.main img.reflection {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  transform: translateY(100%);
+}
+.page.page-38 .caption {
+  position: absolute;
+  top: 8%;
+  left: 10%;
+  color: #fff;
+  font-size: 16pt;
+  line-height: 100%;
+}
+.page.page-38 .bottom-caption {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  color: #fff;
+  line-height: 100%;
+}
+.page.page-38 .bottom-caption p,
+.page.page-38 .bottom-caption h4 {
+  font-size: 10pt;
+}
+@media only screen and (max-width: 767px) {
+  .page.page-38 .caption h2 {
+    font-size: 12pt;
+  }
+  .page.page-38 .caption p {
+    font-size: 10pt;
+  }
+  .page.page-38 .bottom-caption {
+    bottom: 3%;
+    left: 10%;
+    right: 10%;
+  }
+  .page.page-38 .bottom-caption h4,
+  .page.page-38 .bottom-caption p {
+    font-size: 8pt;
+  }
+}
+.quadrant {
+  /* border: solid 1px #f00; */
+}
+.quadrant {
+  position: absolute;
+  width: 50%;
+  box-sizing: border-box;
+}
+.quadrant.tl {
+  height: 52.5%;
+  top: 0;
+  left: 0;
+}
+.quadrant.tr {
+  height: 52.5%;
+  top: 0;
+  right: 0;
+  padding: 2cm 2.2cm 3cm 1cm;
+}
+.quadrant.br {
+  height: 47.5%;
+  bottom: 0;
+  right: 0;
+}
+.quadrant.bl {
+  height: 47.5%;
+  bottom: 0;
+  left: 0;
+  padding: 2cm 1.25cm 3cm 2.1cm;
+}
+.quadrant > img.background {
+  width: 100%;
+  height: 100%;
+  background: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.quadrant > div.top-logo {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 13%;
+  background: rgba(0, 0, 0, 0.25);
+}
+.quadrant.br > div.top-logo {
+  height: 17%;
+}
+.quadrant > div.top-logo > img {
+  position: absolute;
+  left: 20%;
+  width: 18%;
+  top: 45%;
+}
+.quadrant > div.title {
+  position: absolute;
+  right: 0;
+  width: 80%;
+  min-height: 15%;
+  padding-bottom: 0.3cm;
+  padding-top: 0.3cm;
+  top: 63%;
+  background: rgba(4, 18, 60, 0.73);
+  font-family: "VegurBold";
+  color: white;
+  box-sizing: border-box;
+}
+.quadrant > div.title > p {
+  margin: 0.1cm 0.5cm;
+  padding: 0;
+}
+.quadrant > div.title > p:first-child {
+  margin-bottom: 0.3cm;
+}
+@media only screen and (max-width: 230mm) {
+  .quadrant {
+    position: relative;
+    width: 100%;
+    height: initial;
+    /* Boost font size as we've effectively double the width of the quadrants */
+    font-size: 150%;
+  }
+  .quadrant.tl,
+  .quadrant.tr,
+  .quadrant.bl,
+  .quadrant.br {
+    height: initial;
+  }
+  .quadrant.tr,
+  .quadrant.bl {
+    padding: 2cm 3cm;
+  }
+  .quadrant > img.background {
+    position: relative;
+    width: 100%;
+    height: initial;
+  }
+  .quadrant > div.title {
+    font-size: 120%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .quadrant.tr,
+  .quadrant.bl {
+    padding: 1cm 0.5cm;
+  }
+  .quadrant > img.background {
+    position: relative;
+    width: 100%;
+    height: initial;
+  }
+  .quadrant > div.title {
+    font-size: 65%;
+  }
+}
+.page.notes {
+  padding-top: 3cm;
+}
+.page.notes h2 ~ h3 {
+  margin-top: 55pt;
+}
+.page.notes h3 {
+  margin-top: 25pt;
+  font-size: 10pt;
+}
+.page-header {
+  font-size: 8pt;
+  position: absolute;
+  top: 1cm;
+  right: 1.5cm;
+  z-index: 10;
+}
+.page-header .title::before {
+  padding-right: 4pt;
+  content: "GLEIF";
+  color: #009ee3;
+}
+.page-header .title::after {
+  padding-left: 4pt;
+  font-family: "VegurBold";
+  counter-increment: page;
+  content: counter(page);
+}
+.page.page-skip-36 {
+  counter-increment: page 35;
+}
+.page.page-skip-1 {
+  counter-increment: page 1;
+}
+.page.blank .page-header .title::before,
+.page.dark .page-header .title::before,
+.page.blank .page-header,
+.page.dark .page-header {
+  color: white;
+}
+.page.title {
+  padding: 13cm 3cm 3cm 6cm;
+}
+@media only screen and (max-width: 230mm) {
+  .page.title {
+    padding: 4cm 2cm;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .page.title {
+    padding: 3cm 1cm;
+  }
+}
+.page.quadrants {
+  padding: 0;
+}
+.page > .background {
+  width: 100%;
+}
+.page.top-gap {
+  padding-top: 3cm;
+}
+p.bold {
+  font-family: "VegurBold";
+}
+p.bold em {
+  color: #009ee3;
+  font-weight: normal;
+  font-style: normal;
+}
+@media only screen and (max-width: 230mm) {
+  body {
+    -webkit-text-size-adjust: none;
+  }
+  .onepage,
+  .twopage {
+    width: 100%;
+    margin: 0;
+  }
+  .page {
+    width: 100%;
+    height: initial;
+    margin: 0;
+    min-height: 4cm;
+  }
+  .page.narrow {
+    padding-right: 2cm;
+  }
+  .page div.narrow {
+    max-width: 130mm;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .page,
+  .page.narrow {
+    padding-left: 0.25cm;
+    padding-right: 0.25cm;
+  }
+}
+@media only screen and (min-width: 460mm) {
+  .page {
+    float: left;
+  }
+  .onepage {
+    width: 210mm;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .twopage {
+    width: 420mm;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .twopage::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+table.accounts {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 0.4cm;
+}
+table.accounts th,
+table.accounts td {
+  padding: 0.1cm 0;
+  border-bottom: solid 1px #000;
+  vertical-align: top;
+}
+table.accounts tr.double-height {
+  height: 1.1cm;
+}
+table.accounts tr.extra-height,
+table.accounts.extra-height tr {
+  height: 0.9cm;
+}
+table.accounts tr.little-extra-height,
+table.accounts.little-extra-height tr {
+  height: 0.8cm;
+}
+table.accounts thead th {
+  font-weight: normal;
+  border-top: solid 2px #000;
+  text-align: left;
+}
+table.accounts thead th.figure,
+table.accounts tbody td.figure {
+  text-align: right;
+}
+table.accounts thead th.total {
+  font-family: "VegurBold";
+}
+table.accounts thead th.current,
+table.accounts tbody td.current {
+  background-color: #eee;
+  padding-right: 0.1cm;
+  padding-left: 0.1cm;
+}
+table.accounts thead th.spacing,
+table.accounts tbody td.spacing {
+  border-bottom: none;
+  width: 4px;
+  padding: 0;
+}
+table.accounts tr.currency td.figure {
+  text-align: right;
+  color: #009ee3;
+}
+table.accounts td.note a {
+  text-decoration: none;
+  color: #000;
+}
+table.accounts td.note a:hover {
+  text-decoration: underline;
+  color: #009ee3;
+}
+table.accounts tbody td.note-span {
+  border-bottom: none;
+}
+table.accounts tbody tr.section-end td.figure {
+  border-bottom: solid 2px #000;
+}
+table.accounts tbody tr.note-span td.note {
+  border-bottom: none;
+}
+table.accounts tbody tr.total,
+table.accounts tbody tr.grand-total {
+  font-family: "VegurBold";
+}
+table.accounts tbody tr.total td.note,
+table.accounts tbody tr.grand-total td.note {
+  font-family: "VegurLight";
+}
+table.accounts tbody tr.grand-total td.figure,
+table.accounts tbody tr.grand-total-light td.figure,
+table.accounts.note-table {
+  border-top: solid 3px #000;
+}
+div.tabular {
+  margin: 10pt 0;
+  width: 100%;
+  background-color: #ececed;
+}
+div.tabular .body {
+  margin: 10pt;
+  padding-bottom: 5pt;
+}
+div.tabular .body ul {
+  padding-left: 20pt;
+  list-style-type: square;
+}
+div.tabular .body ul li {
+  margin-bottom: 10pt;
+}
+div.tabular h2 {
+  display: block;
+  font-size: 10pt;
+  padding: 7pt 10pt;
+  margin: 0;
+}
+div.tabular.grey {
+  background-color: #ececed;
+}
+div.tabular.grey h2 {
+  color: #fff;
+  background-color: #494948;
+}
+div.tabular.grey ul {
+  color: #878786;
+}
+div.tabular.grey ul li span {
+  color: #000;
+}
+div.tabular.blue h2 {
+  color: #fff;
+  background-color: #46618A;
+}
+div.tabular.blue ul {
+  color: #878786;
+}
+div.tabular.blue ul li span {
+  color: #000;
+}
+div.tabular.bold .body {
+  font-weight: normal;
+  font-family: "VegurBold";
+}
+.col-2 {
+  width: 100%;
+}
+.col-2.col-2::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.col-2 .col {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+}
+.col-2 .col:first-child {
+  padding-right: 15px;
+}
+.col-2 .col:last-child {
+  padding-left: 15px;
+}
+@media only screen and (max-width: 230mm) {
+  .col-2 .col:first-child,
+  .col-2 .col:last-child {
+    float: none;
+    padding: 0;
+    max-width: 130mm;
+    width: initial;
+  }
+}
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    /*Chrome, Safari */
+    color-adjust: exact !important;
+    /*Firefox*/
+  }
+  @page {
+    margin: 0;
+  }
+  .page {
+    margin: 0;
+    page-break-after: always;
+  }
+}
