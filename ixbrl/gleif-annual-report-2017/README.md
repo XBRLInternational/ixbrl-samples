@@ -1,0 +1,1 @@
+GitHub Preview: [gleif-annual-report-2017.html](https://htmlpreview.github.io/?https://github.com/XBRLInternational/ixbrl-samples/blob/master/ixbrl/gleif-annual-report-2017/gleif-annual-report-2017.html)
