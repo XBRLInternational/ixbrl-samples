@@ -1,8 +1,8 @@
 # iXBRL sample documents
 
 This repository contains a number of Inline XBRL (or
-[iXBRL](https://www.xbrl.org/ixbrl)) sample documents created by XBRL
-International.
+[iXBRL](https://www.xbrl.org/ixbrl)) sample documents created by [XBRL
+International](https://www.xbrl.org).
 
 These samples were created to demonstrate that the requirement to use XHTML in
 iXBRL documents imposes no practical constraints on the design and styling of
