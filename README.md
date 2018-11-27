@@ -25,7 +25,7 @@ Foundation's ([GLEIF](https://www.gleif.org)) 2017 annual report.
 
 * [Original PDF][1]
 * [iXBRL][2] (GitHub Preview)
-* [Browse iXBRL files](tree/master/ixbrl/gleif-annual-report-2017)
+* [Browse iXBRL files](https://github.com/XBRLInternational/ixbrl-samples/tree/master/ixbrl/gleif-annual-report-2017)
 
 
 [1]: https://www.gleif.org/content/1-about/9-governance/11-annual-report/2018-04-19_gleif_annual-report_2017-final.pdf
