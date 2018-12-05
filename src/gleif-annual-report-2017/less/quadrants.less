@@ -1,0 +1,122 @@
+
+.quadrant {
+    /* border: solid 1px #f00; */
+}
+.quadrant {
+    position: absolute;
+    width: 50%;
+    box-sizing: border-box;
+
+    &.tl {
+        height: 52.5%;
+        top: 0;
+        left: 0;
+    }
+    &.tr {
+        height: 52.5%;
+        top: 0;
+        right: 0;
+        padding: 2cm 2.2cm 3cm 1cm;
+    }
+    &.br {
+        height: 47.5%;
+        bottom: 0;
+        right: 0;
+    }
+    &.bl {
+        height: 47.5%;
+        bottom: 0;
+        left: 0;
+        padding: 2cm 1.25cm 3cm 2.1cm;
+    }
+    & > img.background {
+        width: 100%;              
+        height: 100%;
+        background: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+.quadrant > div.top-logo {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 13%;
+    background: rgba(0,0,0,0.25);
+}
+.quadrant.br > div.top-logo {
+    height: 17%;
+}
+.quadrant > div.top-logo > img {
+    position: absolute;
+    left: 20%;
+    width: 18%;
+    top: 45%;
+
+}
+.quadrant > div.title {
+    position: absolute; 
+    right: 0;
+    width: 80%;
+    min-height: 15%;
+    padding-bottom: 0.30cm;
+    padding-top: 0.30cm;
+    top: 63%;
+    background: rgba(4,18,60,0.73);
+    font-family: "VegurBold";
+    color: white;
+    box-sizing: border-box;
+    & > p {
+        margin: 0.1cm 0.5cm;
+        padding: 0;
+    }
+    & > p:first-child {
+        margin-bottom: 0.3cm;
+    }
+}
+
+
+.responsive-small({
+    .quadrant {
+        position: relative;
+        width: 100%;
+        height: initial;
+        /* Boost font size as we've effectively double the width of the quadrants */
+        font-size: 150%;
+
+        &.tl, &.tr, &.bl, &.br {
+            height: initial;
+        }
+        &.tr, &.bl {
+            padding: 2cm 3cm;    
+        }
+
+        & > img.background {
+            position: relative;
+            width: 100%;
+            height: initial;
+        }
+        & > div.title {
+            font-size: 120%;
+        }
+    }
+});
+
+.responsive-tiny({
+    .quadrant {
+        &.tr, &.bl {
+            padding: 1cm 0.5cm;    
+        }
+
+        & > img.background {
+            position: relative;
+            width: 100%;
+            height: initial;
+        }
+        & > div.title {
+            font-size: 65%;
+        }
+    }
+});

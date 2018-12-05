@@ -1,0 +1,44 @@
+.page.intro {
+    padding-top: 5cm;    
+    .responsive-small({
+        padding-top: 1cm;
+    });
+    h1 {
+        font-size: 20pt;
+        color: @blue-title;
+    }
+    .body {
+        margin-left: 4cm;
+        .responsive-small({
+            margin-left: inherit;
+
+        });
+        & > p {
+            font-size: 10.5pt;
+        }
+    }
+    .sidebar {
+        h2 {
+            margin-top: -3pt;
+            font-size: 18pt;
+            line-height: 150%;
+        }
+        p {
+            margin:0;
+            line-height: 150%;
+        }
+        font-size: 17pt;
+        font-family: Vegur;
+        color: @blue-highlight;
+        float: left;
+        width: 11.8cm;
+        margin-left: -4cm;
+        padding-right: 0.2cm;
+        .responsive-small({
+            float: none;
+            width: 100%;
+            margin-left: inherit;
+            padding-right: inherit;
+        });
+    }
+}

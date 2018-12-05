@@ -1,0 +1,10 @@
+%.html: %.ixtmpl
+	aoix $< -o $@
+
+DATE := $(shell date "+%Y%m%d")
+TARGET := "../../ixbrl/$(NAME)/"
+
+styles.css: less/*.less
+	lessc less/styles.less > styles.css
+
+.PRECIOUS: %.html

@@ -1,0 +1,36 @@
+.page.cover-page {
+    
+    padding: 0;
+
+    img.logo {
+        position: absolute;
+        top: 4%;
+        left: 30%;
+        width: 27%;
+    }
+    
+
+    h1 {
+        position: absolute;
+        top: 5.5cm;
+        left: 2cm;
+        padding-right: 4cm;
+        .title {
+            color: @blue-highlight;
+            padding-left: 5pt;
+        }
+        
+    }
+
+}
+
+.responsive-small({
+    .page.cover-page {
+        padding: 0;
+        & > .background {
+            position: relative;
+            height: initial;
+        }
+
+    }
+});

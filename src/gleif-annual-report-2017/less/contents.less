@@ -1,0 +1,56 @@
+
+
+.page.contents {
+    background-image: url("img/2-bg.png");
+    background-size: 100% auto;
+    background-position: top left;
+    background-repeat: no-repeat;
+    h1 {
+        color: #000;
+        margin-left: 4.5cm;
+        margin-top: 1cm;
+        margin-bottom: 1.5cm;
+        font-size: 20pt;
+        
+    }
+    .responsive-tiny({
+        padding: 1cm 1cm;
+        h1 {
+            margin: 1cm 0 1cm 0;
+            text-align: center;
+        }
+    });
+
+    div.toc {
+        a {
+            text-decoration: none;
+            color: inherit;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        box-sizing: border-box;
+        background: rgba(4,18,60,0.73);
+        padding: 0.5cm 1cm 1cm 3cm;
+        width: 12cm;
+        margin-left: 4.5cm;
+        .responsive-tiny({
+            margin-left: 0;
+            width: initial;
+            padding: 0.5cm;
+        });
+        table {
+            color: white;
+            font-family: VegurBold;
+            td {
+                vertical-align: top;
+                padding: 0.05cm 0.3cm;
+                line-height: 150%;
+            }
+            tr td:first-child {
+                text-align: right;
+            }
+        }
+    }
+    
+}
