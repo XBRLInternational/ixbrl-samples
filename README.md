@@ -28,8 +28,8 @@ The repository includes the following samples:
 ## Source
 
 The samples are created using a simple templating system, and CSS files prepared using the less CSS
-preprocessor.  The source from which these files are built can be found the src
-[directory](https://github.com/XBRLInternational/ixbrl-samples/tree/master/src)
+preprocessor.  The source from which these files are built can be found the 
+[src directory](https://github.com/XBRLInternational/ixbrl-samples/tree/master/src)
 
 
 
