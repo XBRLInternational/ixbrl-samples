@@ -24,12 +24,12 @@ This sample is based on an extract from the Global Legal Entity Identifier
 Foundation's ([GLEIF](https://www.gleif.org)) 2017 annual report.  
 
 * [Original PDF][1]
-* [iXBRL][2] (GitHub Preview)
+* [iXBRL][2] 
 * [Browse iXBRL files](https://github.com/XBRLInternational/ixbrl-samples/tree/master/ixbrl/gleif-annual-report-2017)
 
 
 [1]: https://www.gleif.org/content/1-about/9-governance/11-annual-report/2018-04-19_gleif_annual-report_2017-final.pdf
-[2]: https://htmlpreview.github.io/?https://github.com/XBRLInternational/ixbrl-samples/blob/master/ixbrl/gleif-annual-report-2017/gleif-annual-report-2017.html
+[2]: https://xbrlinternational.github.io/ixbrl-samples/ixbrl/gleif-annual-report-2017/gleif-annual-report-2017.html
 
 ### Features
 
