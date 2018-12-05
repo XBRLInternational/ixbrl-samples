@@ -50,11 +50,6 @@ h3 .subtitle {
   font-family: "VegurLight";
   font-size: 14pt;
 }
-@media only screen and (max-width: 767px) {
-  h3 .subtitle {
-    font-size: 10pt;
-  }
-}
 h4 {
   font-family: "VegurBold";
   font-weight: normal;
@@ -112,15 +107,6 @@ h4 {
   color: #009ee3;
   padding-left: 5pt;
 }
-@media only screen and (max-width: 230mm) {
-  .page.cover-page {
-    padding: 0;
-  }
-  .page.cover-page > .background {
-    position: relative;
-    height: initial;
-  }
-}
 .page.contents {
   background-image: url("img/2-bg.png");
   background-size: 100% auto;
@@ -133,15 +119,6 @@ h4 {
   margin-top: 1cm;
   margin-bottom: 1.5cm;
   font-size: 20pt;
-}
-@media only screen and (max-width: 767px) {
-  .page.contents {
-    padding: 1cm 1cm;
-  }
-  .page.contents h1 {
-    margin: 1cm 0 1cm 0;
-    text-align: center;
-  }
 }
 .page.contents div.toc {
   box-sizing: border-box;
@@ -156,13 +133,6 @@ h4 {
 }
 .page.contents div.toc a:hover {
   text-decoration: underline;
-}
-@media only screen and (max-width: 767px) {
-  .page.contents div.toc {
-    margin-left: 0;
-    width: initial;
-    padding: 0.5cm;
-  }
 }
 .page.contents div.toc table {
   color: white;
@@ -179,22 +149,12 @@ h4 {
 .page.intro {
   padding-top: 5cm;
 }
-@media only screen and (max-width: 230mm) {
-  .page.intro {
-    padding-top: 1cm;
-  }
-}
 .page.intro h1 {
   font-size: 20pt;
   color: #46618A;
 }
 .page.intro .body {
   margin-left: 4cm;
-}
-@media only screen and (max-width: 230mm) {
-  .page.intro .body {
-    margin-left: inherit;
-  }
 }
 .page.intro .body > p {
   font-size: 10.5pt;
@@ -216,14 +176,6 @@ h4 {
 .page.intro .sidebar p {
   margin: 0;
   line-height: 150%;
-}
-@media only screen and (max-width: 230mm) {
-  .page.intro .sidebar {
-    float: none;
-    width: 100%;
-    margin-left: inherit;
-    padding-right: inherit;
-  }
 }
 .page.page-38 {
   padding: 0;
@@ -278,23 +230,6 @@ h4 {
 .page.page-38 .bottom-caption p,
 .page.page-38 .bottom-caption h4 {
   font-size: 10pt;
-}
-@media only screen and (max-width: 767px) {
-  .page.page-38 .caption h2 {
-    font-size: 12pt;
-  }
-  .page.page-38 .caption p {
-    font-size: 10pt;
-  }
-  .page.page-38 .bottom-caption {
-    bottom: 3%;
-    left: 10%;
-    right: 10%;
-  }
-  .page.page-38 .bottom-caption h4,
-  .page.page-38 .bottom-caption p {
-    font-size: 8pt;
-  }
 }
 .quadrant {
   /* border: solid 1px #f00; */
@@ -371,47 +306,6 @@ h4 {
 .quadrant > div.title > p:first-child {
   margin-bottom: 0.3cm;
 }
-@media only screen and (max-width: 230mm) {
-  .quadrant {
-    position: relative;
-    width: 100%;
-    height: initial;
-    /* Boost font size as we've effectively double the width of the quadrants */
-    font-size: 150%;
-  }
-  .quadrant.tl,
-  .quadrant.tr,
-  .quadrant.bl,
-  .quadrant.br {
-    height: initial;
-  }
-  .quadrant.tr,
-  .quadrant.bl {
-    padding: 2cm 3cm;
-  }
-  .quadrant > img.background {
-    position: relative;
-    width: 100%;
-    height: initial;
-  }
-  .quadrant > div.title {
-    font-size: 120%;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .quadrant.tr,
-  .quadrant.bl {
-    padding: 1cm 0.5cm;
-  }
-  .quadrant > img.background {
-    position: relative;
-    width: 100%;
-    height: initial;
-  }
-  .quadrant > div.title {
-    font-size: 65%;
-  }
-}
 .page.notes {
   padding-top: 3cm;
 }
@@ -455,16 +349,6 @@ h4 {
 .page.title {
   padding: 13cm 3cm 3cm 6cm;
 }
-@media only screen and (max-width: 230mm) {
-  .page.title {
-    padding: 4cm 2cm;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .page.title {
-    padding: 3cm 1cm;
-  }
-}
 .page.quadrants {
   padding: 0;
 }
@@ -481,36 +365,6 @@ p.bold em {
   color: #009ee3;
   font-weight: normal;
   font-style: normal;
-}
-@media only screen and (max-width: 230mm) {
-  body {
-    -webkit-text-size-adjust: none;
-  }
-  .onepage,
-  .twopage {
-    width: 100%;
-    margin: 0;
-  }
-  .page {
-    width: 100%;
-    height: initial;
-    margin: 0;
-    min-height: 4cm;
-  }
-  .page.narrow {
-    padding-right: 2cm;
-  }
-  .page div.narrow {
-    max-width: 130mm;
-    padding: 0;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .page,
-  .page.narrow {
-    padding-left: 0.25cm;
-    padding-right: 0.25cm;
-  }
 }
 @media only screen and (min-width: 460mm) {
   .page {
@@ -680,15 +534,6 @@ div.tabular.bold .body {
 }
 .col-2 .col:last-child {
   padding-left: 15px;
-}
-@media only screen and (max-width: 230mm) {
-  .col-2 .col:first-child,
-  .col-2 .col:last-child {
-    float: none;
-    padding: 0;
-    max-width: 130mm;
-    width: initial;
-  }
 }
 @media print {
   * {
