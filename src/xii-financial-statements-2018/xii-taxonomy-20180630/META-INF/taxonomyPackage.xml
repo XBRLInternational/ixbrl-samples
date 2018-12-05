@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tp:taxonomyPackage xml:lang="en" xmlns:tp="http://xbrl.org/2016/taxonomy-package"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xbrl.org/2016/taxonomy-package http://www.xbrl.org/2016/taxonomy-package.xsd">
+  <tp:identifier>http://www.xbrl.org/taxonomy/xii/2018-06-30</tp:identifier> 
+  <tp:name>XII Financial Report Taxonomy</tp:name>
+  <tp:description>This is an extension taxonomy created for reporting XBRL International Inc's financial report. The taxonomy imports US-GAAP 2017 taxonomy and XBRL International's LEI (CR) taxonomy.</tp:description>
+  <tp:version>2018-06-30</tp:version>
+  <tp:publisher>XBRL International Inc.</tp:publisher>
+  <tp:publisherURL>https://www.xbrl.org/</tp:publisherURL>
+  <tp:publisherCountry>US</tp:publisherCountry>
+  <tp:publicationDate>2018-11-01</tp:publicationDate>
+  <tp:entryPoints>
+    <tp:entryPoint>
+      <tp:name>XII Financial Report</tp:name>
+      <tp:description>Elements, presentation and calculation tree for preparing XBRL International’s financial report. 
+	 </tp:description>
+      <tp:entryPointDocument href="http://www.xbrl.org/taxonomy/xii/2018-06-30/xii-20180630.xsd"/>
+    </tp:entryPoint>
+   
+  </tp:entryPoints>
+</tp:taxonomyPackage>

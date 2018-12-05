@@ -1,0 +1,360 @@
+@font-face {
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/GothamHTF-Book.woff') format('woff');
+}
+@font-face {
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: 300;
+  src: url('fonts/GothamLight.woff');
+}
+body {
+  background-color: #555;
+  font-family: "Gotham";
+  margin: 0;
+  font-weight: 300;
+  counter-reset: page;
+}
+body,
+table {
+  font-size: 9pt;
+  line-height: 13pt;
+  color: #231f20;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: underline;
+}
+.page {
+  width: 210mm;
+  height: 297mm;
+  background-color: white;
+  margin-top: 1cm;
+  margin-bottom: 1cm;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding: 2cm 1.8cm 2cm 1.8cm;
+  overflow: hidden;
+  counter-increment: page;
+  box-sizing: border-box;
+  page-break-after: always;
+}
+.page:not(.cover-page):not(.audit-report) {
+  background-image: url(img/xii-header.png), url(img/xii-footer.png), url(img/xii-logo.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: left top, left bottom, 90% 40px;
+  background-size: 100%, 100%, 50px auto;
+}
+@media screen and (max-width: 230mm) {
+  .page:not(.cover-page):not(.audit-report) {
+    background-image: url(img/xii-header.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100%;
+  }
+}
+.page:not(.cover-page):not(.audit-report):after {
+  position: absolute;
+  font-weight: normal;
+  bottom: 9px;
+  right: 2cm;
+  content: counter(page);
+  color: #46a2df;
+}
+@media screen and (max-width: 230mm) {
+  .page:not(.cover-page):not(.audit-report):after {
+    display: none;
+  }
+}
+.page .see-notes {
+  position: absolute;
+  left: 1.8cm;
+  bottom: 1.5cm;
+}
+@media screen and (max-width: 230mm) {
+  .page .see-notes {
+    bottom: 0.8cm;
+  }
+}
+.page.audit-report {
+  background-image: url("img/curchin.jpg");
+  background-position: 1.8cm 1.8cm;
+  background-size: 150px auto;
+  background-repeat: no-repeat;
+  padding-top: 4.3cm;
+}
+.page.audit-report h2,
+.page.audit-report h3 {
+  color: #231f20;
+}
+@media screen and (max-width: 230mm) {
+  .page.audit-report {
+    border-top: solid 1px #231f20;
+  }
+}
+.page.audit-report .auditors {
+  margin-top: 3cm;
+}
+.page.audit-report .auditors .name {
+  font-weight: bold;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: #46a2df;
+  font-weight: normal;
+}
+h2 {
+  font-size: 20pt;
+}
+h3 {
+  font-size: 10pt;
+  margin-bottom: 0;
+}
+span.h5 {
+  font-weight: normal;
+  display: inline;
+  font-size: 9pt;
+}
+span.h5:after {
+  content: " - ";
+  font-weight: 300;
+}
+p {
+  margin-top: 0;
+}
+.addressee {
+  margin: 10pt 0;
+  color: black;
+  font-weight: bold;
+}
+.addressee p {
+  margin-bottom: 0;
+}
+.page.contents {
+  padding: 9cm 2cm 0 7cm;
+}
+@media screen and (max-width: 230mm) {
+  .page.contents {
+    padding: 2cm 1.8cm 2cm 1.8cm;
+  }
+}
+.page.contents h2 {
+  font-weight: normal;
+  font-size: 22pt;
+  margin-bottom: 1.2cm;
+}
+.page.contents table {
+  width: 100%;
+  font-size: 12pt;
+  border-collapse: collapse;
+  font-weight: 300;
+}
+.page.contents table td {
+  border-bottom: solid 1px #46a2df;
+  padding: 6px 0;
+}
+.page.contents table td:last-child {
+  text-align: right;
+}
+@media screen and (max-width: 230mm) {
+  .page.contents table td:last-child {
+    display: none;
+  }
+}
+p.period-subtitle {
+  font-size: 11pt;
+  color: #666666;
+}
+@media screen and (max-width: 230mm) {
+  body {
+    -webkit-text-size-adjust: none;
+    background-color: #fff;
+  }
+  .page {
+    width: 100%;
+    height: initial;
+    margin: 0;
+    min-height: 4cm;
+  }
+  .continued {
+    display: none;
+  }
+}
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    /*Chrome, Safari */
+    color-adjust: exact !important;
+    /*Firefox*/
+  }
+  @page {
+    margin: 0;
+  }
+  .page {
+    margin: 0;
+    width: 210mm;
+    height: 297mm;
+  }
+}
+table.accounts {
+  width: 100%;
+  border-collapse: collapse;
+  font-weight: 300;
+}
+table.accounts thead th {
+  border-bottom: solid 3px #bdbdbc;
+  color: #46a2df;
+}
+table.accounts td,
+table.accounts th {
+  padding: 4px 8px;
+  box-sizing: border-box;
+  height: 25px;
+}
+table.accounts td.current,
+table.accounts th.current {
+  background-color: #e9e9e9;
+}
+table.accounts th.figure {
+  text-align: right;
+}
+table.accounts td.figure {
+  text-align: right;
+}
+table.accounts tr.title td.label {
+  font-weight: bold;
+  color: #666666;
+}
+table.accounts tr.section-title td.label {
+  font-weight: bold;
+  color: #666666;
+  text-transform: uppercase;
+}
+table.accounts tr.movement td.label {
+  text-transform: uppercase;
+}
+table.accounts tr.grand-total td {
+  /*border-top: solid 3px #bdbdbc; */
+  border-bottom: solid 3px #bdbdbc;
+  font-weight: bold;
+  color: #666666;
+}
+table.accounts tr.underline td {
+  border-bottom: solid 1px #bdbdbc;
+}
+table.accounts tr.indent td:first-child {
+  padding-left: 0.5cm;
+}
+table.accounts tr.indent-2 td:first-child {
+  padding-left: 1cm;
+}
+table.accounts tr.indent-3 td:first-child {
+  padding-left: 1.5cm;
+}
+table.accounts tr.indent-4 td:first-child {
+  padding-left: 2cm;
+}
+table.accounts tr.indent-5 td:first-child {
+  padding-left: 2.5cm;
+}
+table.accounts tr.gap td {
+  height: 40px;
+  vertical-align: bottom;
+}
+table.accounts tr.double-height td {
+  height: 40px;
+  vertical-align: top;
+}
+table.accounts tr.gap.double-height td {
+  height: 55px;
+  vertical-align: middle;
+}
+table.accounts tr.currency td.figure:before {
+  content: "$";
+}
+.page.cover-page {
+  background-image: url(img/xii-cover-page-bg.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 100%;
+  padding-top: 11.9cm;
+  position: relative;
+}
+.page.cover-page h1 {
+  margin-top: 1.5cm;
+  color: white;
+  font-weight: bold;
+}
+.page.cover-page .subtitle {
+  color: white;
+  margin-top: 1.2cm;
+  font-size: 14pt;
+}
+.page.cover-page .subtitle > p {
+  margin: 0.25cm 0;
+}
+.page.cover-page img.logo {
+  width: 215px;
+  position: absolute;
+  top: 8.3cm;
+  left: 1.8cm;
+  height: initial;
+}
+@media only screen and (max-width: 230mm) {
+  .page.cover-page {
+    background-size: 230mm auto;
+    background-position: left 60mm;
+    height: 190mm;
+    padding-top: 6.6cm;
+  }
+  .page.cover-page img.logo {
+    top: 2cm;
+  }
+}
+@media screen and (max-width: 230mm) {
+  .page.notes + .page.notes {
+    background: none;
+    padding-top: 0;
+    margin-top: -2cm;
+  }
+  .page.notes + .page.notes :first-child {
+    margin-top: 0;
+  }
+}
+.page.notes h2 {
+  text-transform: uppercase;
+  font-size: 9pt;
+  margin-bottom: 1cm;
+  font-weight: bold;
+}
+.page.notes h3 {
+  text-transform: uppercase;
+  margin-bottom: 0.4cm;
+  font-size: 9pt;
+}
+.page.notes h3 .note-number {
+  font-size: 10pt;
+  display: block;
+  color: #666666;
+  text-transform: uppercase;
+}
+.page.notes h3 .continued {
+  text-transform: none;
+}
+.page.notes h4 {
+  font-weight: bold;
+  color: #231f20;
+  font-size: 9pt;
+  margin-bottom: 0;
+}
+.page.notes .notes-indent {
+  margin-left: 1cm;
+}

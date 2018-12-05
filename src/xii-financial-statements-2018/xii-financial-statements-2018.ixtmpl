@@ -1,0 +1,578 @@
+{{ namespace xii = "http://www.xbrl.org/taxonomy/xii/2018-06-30" }}
+{{ namespace us-gaap = "http://fasb.org/us-gaap/2017-01-31" }}
+{{ namespace dei = "http://xbrl.sec.gov/dei/2014-01-31" }}
+{{ schema-ref "http://www.xbrl.org/taxonomy/xii/2018-06-30/xii-20180630.xsd" }}
+
+{{ period cur "2017-07-01" "2018-06-30" }}
+{{ period prev "2016-07-01" "2017-06-30" }}
+
+{{ default period = cur }}
+{{ default period-type = instant }}
+{{ default monetary-units = USD }}
+{{ default numeric-transform = numdotdecimal}}
+{{ default decimals = "0" }}
+{{ default entity-scheme="http://standards.iso.org/iso/17442" }}
+{{ default entity-identifier="254900ARU0VC1WY6GJ71" }}
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" {{ namespaces }}>
+
+    <head>
+        <title>XBRL International Financial Statements June 30, 2018 and 2017</title>
+        <link rel="stylesheet" href="styles.css" ></link>
+        <meta name="viewport" content="width=device-width, initial-scale=1" ></meta>
+
+		
+    </head>
+	<body>
+		<div style="display:none">
+        {{ header }}
+		</div>
+		
+	<div class="page cover-page">
+			
+			<img class="logo" src="img/xii-logo.svg" alt=""></img>
+		
+			{{string dei:EntityRegistrantName[period-type=duration] }}
+				<h1> XBRL International, Inc </h1>
+			{{end}}
+            <div class="subtitle">
+                <p >
+                    Financial Statements
+                </p>
+                <p> 
+		{{string dei:DocumentPeriodEndDate[period-type=duration, transform=datemonthdayyearen]}}June 30, 2018{{end}} and 2017
+                </p>
+	        </div>	
+        </div>
+        <div class="page contents">
+			<h2>Contents</h2>
+			
+			
+            <table>
+                <tr>
+                    <td>
+                        <a href="#AR" > Independent Auditor's Report </a>    
+                    </td>
+                    <td>
+                        3
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+				<a href="#BS" > Statements of Financial Position </a>
+                    </td>
+                    <td>
+                        4
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#IS" > Statements of Activities </a>
+                    </td>
+                    <td>
+                        5
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+				<a href="#CF" > Statements of Cash Flows </a>
+                    </td>
+                    <td>
+                        6
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+				<a
+            href="#NF"
+        >
+            Notes to Financial Statements
+				</a>
+                    </td>
+                    <td>
+                        7
+                    </td>
+                </tr>
+	          </table>	
+		</div>
+		<div class="page audit-report">
+		
+{{string xii:AuditorReportTextBlock[period-type=duration] }}
+			
+				<h2> <a id="AR">Independent Auditor's Report</a> </h2>
+			
+            <div class="addressee">
+                <p>
+    To the Board of Directors
+                </p>
+                <p>
+    XBRL International, lnc.
+                </p>
+            </div>
+			<p>
+    We have audited the accompanying financial statements of XBRL
+    International, lnc. (a nonprofit corporation), which comprise the
+    statements of financial position as of June 30, 2018 and 2017, and the
+    related statements of activities and cash flows for the years then ended,
+    and the related notes to the financial statements.
+			</p>
+				<h3>Management's Responsibility for the Financial Statements</h3>
+			<p>
+    Management is responsible for the preparation and fair presentation of
+    these financial statements in accordance with accounting principles
+    generally accepted in the United States of America; this includes the
+    design, implementation, and maintenance of internal control relevant to the
+    preparation and fair presentation of financial statements that are free
+    from material misstatement, whether due to fraud or error.
+			</p>
+            <h3>Auditor's Responsibility</h3>
+			<p>
+    Our responsibility is to express an opinion on these financial statements
+    based on our audits. We conducted our audits in accordance with auditing
+    standards generally accepted in the United States of America. Those
+    standards require that we plan and perform the audit to obtain reasonable
+    assurance about whether the financial statements are free from material
+    misstatement.
+			</p>
+			<p>
+    An audit involves performing procedures to obtain audit evidence about the
+    amounts and disclosures in the financial statements. The procedures
+    selected depend on the auditor's judgment, including the assessment of the
+    risks of material misstatement of the financial statements, whether due to
+    fraud or error. ln making those risk assessments, the auditor considers internal control relevant to the entity's preparation
+    and fair presentation of the financial statements in order to design audit
+    procedures that are appropriate in the circumstances, but not for the
+    purpose of expressing an opinion on the effectiveness of the entity's
+    internal control. Accordingly, we express no such opinion. An audit also includes evaluating the appropriateness of accounting
+    policies used and the reasonableness of significant accounting estimates
+    made by management, as well as evaluating the overall presentation of the
+    financial statements.
+			</p>
+			<p>
+    We believe that the audit evidence we have obtained is sufficient and
+    appropriate to provide a basis for our audit opinion.
+			</p>
+            <h3>Opinion</h3>
+			<p>
+    ln our opinion, the financial statements referred to above present fairly
+    in all material respects the financial position of XBRL International, lnc.
+    as of June 30, 2018, and 2017, and the changes in its net assets and its
+    cash flows for the years then ended in accordance with accounting
+    principles generally accepted in the United States of America.
+			</p>
+			
+			<br/>
+			
+            <div class="auditors">
+                <div class="name">
+                    THE CURCHIN GROUP, LLC
+                </div>
+                <p>
+    Red Bank, New Jersey <br />
+    September 28, 2018
+                </p>
+            </div>
+{{ end }} 
+		</div>
+
+		<div class="page">
+			<h2>
+				<a id="BS">Statements of Financial Position</a>
+			</h2>
+
+			<p class="period-subtitle">
+    Years Ended June 30, 2018 and 2017
+			</p>
+			<table class="accounts">
+			 <thead>
+			 <tr class="double-height">
+                            <th style="width: 50%"></th>
+                            
+                            <th class="figure current">June 30, 2018</th>
+                           
+                            <th class="figure">June 30, 2017</th>
+                        </tr>
+                    </thead>
+			
+				<tbody>
+{{ default table-fact-type = monetary }}
+{{ default monetary-units = USD }} 
+{{ column-aspects   static  [period = cur, period-type=instant]  [period = prev, period-type=instant] }}
+{{ column-styles    "label"  "figure current"  "figure" }}
+{{row "double-height section-title" static "Assets:" "" "" "" ""}}
+{{row "title" static "Current assets:" "" "" "" ""}}
+{{row "indent currency" us-gaap:CashAndCashEquivalentsAtCarryingValue[] "Cash and equivalents" "414,769" "266,655"}}
+{{row "indent" us-gaap:AccountsReceivableNetCurrent[] "Dues receivable" "179,330" "252,117"}}
+{{row "indent" xii:CertificationRoyaltyReceivableCurrent[] "Certification royalty receivable" "3,269" "1,990"}}
+{{row "indent underline" us-gaap:PrepaidExpenseAndOtherAssetsCurrent[] "Prepaid expenses and other assets" "27,368" "135,633"}}
+{{row "gap grand-total indent-2" us-gaap:AssetsCurrent[] "Total Current Assets" "624,736" "656,395"}}
+<!--
+{{row "grand-total currency" us-gaap:Assets[] "Total Assets" "624,736" "656,395"}}
+-->
+{{row "double-height gap section-title" static "Liabilities and Net Assets:" "" ""}}
+{{row "title" static "Current liabilities:" "" ""}}
+{{row "indent currency" us-gaap:AccountsPayableAndAccruedLiabilitiesCurrent[] "Accounts payable and accrued expenses" "75,282" "103,110"}}
+{{row "indent" us-gaap:DeferredRevenueCurrent[] "Unearned dues" "289,260" "302,289"}}
+{{row "indent underline" us-gaap:OtherDeferredCreditsCurrent[] "Deferred conference revenue" "-" "7,302" }}
+{{row "gap indent-2" us-gaap:LiabilitiesCurrent[] "Total Current Liabilities" "364,542" "412,701"}}
+{{row "gap underline" xii:UnrestrictedNetAssets[] "Net assets - unrestricted" "260,194" "243,694"}}
+{{row "grand-total currency indent-2 gap" xii:LiabilitiesAndNetAssets[] "Total Liabilities and Net Assets" "624,736" "656,395"}}
+
+
+    </tbody>
+                </table>				
+            <div class="see-notes">
+                <a href="#NF">See accompanying notes to financial statements.</a>
+            </div>
+				
+		</div>
+
+		<div class="page">
+			<h2>
+				<a id="IS">Statements of Activities </a>
+			</h2>
+            <p class="period-subtitle">
+    Years Ended June 30, 2018 and 2017
+			</p>
+			<table class="accounts">
+			 <thead>
+			 <tr class="double-height">
+                            <th style="width: 55%"></th>
+                            <th class="figure current">June 30, 2018</th>
+                            <th class="figure">June 30, 2017</th>
+                        </tr>
+                    </thead>
+			
+				<tbody>
+{{ default table-fact-type = monetary }}
+{{ default monetary-units = USD }} 
+{{ column-aspects   static  [period = cur, period-type=duration]  [period = prev, period-type=duration] }}
+{{ column-styles    "label"  "figure current"  "figure" }}
+{{row "section-title" static "Support and Revenues" "" ""}}
+{{row "indent currency" us-gaap:MembershipDuesRevenueOnGoing[] "Dues income" "786,049" "748,420"}}
+{{row "indent" xii:ConferenceRevenueNet[] "Co-sponsorship conference fee, net" "93,358" "45,242"}}
+{{row "indent" xii:SoftwareCertificationRevenue[] "Software certification" "17,100" "-"}}
+{{row "indent" us-gaap:RoyaltyRevenue[] "Subject Matter Expert certification revenue" "5,206" "9,522"}}
+{{row "indent" us-gaap:InvestmentIncomeInterest[] "lnterest income" "777" "175"}}
+{{row "indent underline" us-gaap:OtherNonoperatingIncome[] "Consulting income" "1,354" "10,000"}}
+{{row "gap underline indent-2" xii:OperatingAndNonoperatingRevenue[] "Total Support and Revenues" "903,844" "813,359"}}
+
+{{row "section-title" static "Expenses" "" ""}}
+{{row "title indent" static "Program services" "" ""}}
+{{row "indent-2" us-gaap:SalariesWagesAndOfficersCompensation[] "Salaries, benefits, and contract staffing expense" "590,520" "621,631"}}
+{{row "indent-2" xii:MeetingExpense[] "Meeting expense" "67,113" "48,404"}}
+{{row "indent-2" xii:MaintenanceExpense[] "Web site maintenance" "9,766" "9,768"}}
+{{row "indent-2" us-gaap:TravelAndEntertainmentExpense[] "Meals and entertainment" "321" "105"}}
+{{row "indent-2" us-gaap:MarketingExpense[] "Marketing and communications" "82,097" "64"}}
+{{row "indent-2" us-gaap:RoyaltyExpense[] "Subject Matter Expert royalty costs" "1,302" "2,380"}}
+{{row "title indent" static "Supporting services" "" ""}}
+{{row "indent-2" us-gaap:ProfessionalFees[] "Legal and accounting fees" "91,383" "112,352"}}
+{{row "indent-2" us-gaap:GeneralInsuranceExpense[] "lnsurance expense" "12,355" "11,585"}}
+{{row "indent-2" us-gaap:OtherSellingGeneralAndAdministrativeExpense[] "Office, telephone, and sundry" "17,439" "16,929"}}
+{{row "indent-2" xii:BankCharges[] "Bank charges" "16,056" "14,643"}}
+{{row "indent-2" us-gaap:ProvisionForDoubtfulAccounts[] "Bad debt" "-" "11,864"}}
+{{row "indent-2 underline" us-gaap:ForeignCurrencyTransactionGainLossBeforeTax[sign=flip] "Currency exchanges loss (gain)" "(1,008)" "12,625"}}
+{{row "gap underline indent-3" xii:OperatingAndNonoperatingCostsAndExpenses[] "Total Expenses" "887,344" "862,350"}}
+{{row "movement gap" us-gaap:NetIncomeLoss[] "Change in unrestricted net assets" "16,500" "(48,991)"}}
+{{row "movement gap underline" xii:UnrestrictedNetAssets[period-type=instant-start] "Unrestricted net assets, beginning of year" "243,694" "292,685"}}
+{{row "movement grand-total gap currency" xii:UnrestrictedNetAssets[period-type=instant] "Unrestricted net assets, end of year" "260,194" "243,694"}}
+	
+				</tbody>
+			</table>
+            <div class="see-notes">
+                <a href="#NF">See accompanying notes to financial statements.</a>
+            </div>
+		</div>
+
+		<div class="page">
+			<h2>
+				<a id="CF">Statements of Cash Flows</a>
+			</h2>
+            <p class="period-subtitle">
+    Years Ended June 30, 2018 and 2017
+			</p>
+			
+			<table class="accounts">
+			 <thead>
+			 <tr class="double-height">
+                            <th style="width: 50%"></th>
+                          
+                            <th class="figure current">June 30, 2018</th>
+                         
+                            <th class="figure">June 30, 2017</th>
+                        </tr>
+                    </thead>
+			
+				<tbody>
+{{ default table-fact-type = monetary }}
+{{ default monetary-units = USD }} 
+{{ column-aspects   static  [period = cur, period-type=duration]  [period = prev, period-type=duration] }}
+{{ column-styles    "label"  "figure current"  "figure" }}
+{{row "section-title gap double-height" static "Cash flows from operating activities" "" ""}}
+{{row "indent double-height currency" us-gaap:ProfitLoss[] "Change in unrestricted net assets" "16,500" "(48,991)"}}
+{{row "indent" static "Adjustments to reconcile change in unrestricted net assets to net cash flows from operating activities:" "" ""}}
+{{row "indent-2" us-gaap:ProvisionForDoubtfulAccounts[] "Bad debt" "-" "11,864"}}
+{{row "indent-2" static	"Changes in operating assets and liabilities:" "" ""}}
+{{row "indent-3" us-gaap:IncreaseDecreaseInAccountsReceivable[sign=flip] "Dues receivable" "72,787" "168,260"}}
+{{row "indent-3" us-gaap:IncreaseDecreaseInOtherReceivables[sign=flip] "Co-sponsorship conference fees receivable" "-" "3,350"}}
+{{row "indent-3" xii:IncreaseDecreaseInCertificationRoyaltyReceivable[sign=flip] "Certification royalty receivable" "(1,279)" "161"}}
+{{row "indent-3" us-gaap:IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets[sign=flip] "Prepaid expenses and other assets" "108,265" "(63,519)"}}
+{{row "indent-3" us-gaap:IncreaseDecreaseInAccountsPayableTrade[] "Accounts payable" "(27,828)" "(21,878)"}}
+{{row "indent-3" us-gaap:IncreaseDecreaseInDeferredRevenue[] "Unearned dues" "(13,029)" "48,594"}}
+{{row "indent-3" us-gaap:IncreaseDecreaseInOtherAccountsPayable[] "Co-sponsorship conference fees payable" "-" "(30,052)"}}
+{{row "indent-3 underline" xii:IncreaseDecreaseInOtherDeferredCredits[] "Deferred conference revenue" "(7,302)" "5,587"}}
+{{row "indent-4 gap underline" us-gaap:NetCashProvidedByUsedInOperatingActivities[] "Net cash flows from operating activities" "148,114" "73,376"}}
+{{row "gap movement" us-gaap:CashAndCashEquivalentsPeriodIncreaseDecrease[] "Net change in cash and equivalents" "148,114" "73,376"}}
+{{row "gap underline movement" us-gaap:CashAndCashEquivalentsAtCarryingValue[period-type=instant-start] "Cash and equivalents, beginning of year" "266,655" "193,279"}}
+{{row "grand-total currency movement gap" us-gaap:CashAndCashEquivalentsAtCarryingValue[period-type=instant] "Cash and equivalents, end of year" "414,769" "266,655"}}
+
+			
+			
+				</tbody>
+			</table>
+            <div class="see-notes">
+                <a href="#NF">See accompanying notes to financial statements.</a>
+            </div>
+		</div>
+
+		<div class="page notes">
+			<h2>XBRL International, Inc.<br />
+            <a id="NF">Notes to Financial Statements</a><br />
+            Years Ended June 30, 2018 and 2017
+			</h2>
+
+			{{string us-gaap:BusinessDescriptionAndAccountingPoliciesTextBlock[period-type=duration] }}
+			<h3>
+<a id="NF1">
+	<span class="note-number">Note 1</span> Nature of Organization and Summary of Significant Accounting
+    Policies:
+				</a>	
+			</h3>
+        <h4>Nature of the Organization</h4> 
+        <p>
+    XBRL International, lnc. (the "Corporation")
+    was incorporated in the state of Delaware in 2001. The Corporation is a
+    global consortium of approximately 550 of the world's leading technology,
+    accounting, financial services and regulatory organizations devoted to
+    developing and promoting the adoption of the extensible Business Reporting
+    Language ('XBRL') as a global standard. XBRL International lnc. has an explicitly public interest purpose, to
+    improve the accountability and transparency of business performance
+    globally, by proving the open data exchange standard for business
+    reporting.
+        </p>
+        <p>
+    XBRL is a royalty-free, open specification for software that uses XML data
+    tags to describe financial information for public and private companies and
+    other organizations. lt is designed to benefit everyone involved in the
+    preparation or collection of business information by utilizing a platform
+    independent, standards-based method with which users can prepare, publish
+    in a variety of formats, exchange and analyze business reports and the information they contain. It can be used
+    to express a wide range of reports and disclosures for both internal and
+    external reporting purposes. Business reporting includes, but is not
+    limited to, financial statements, financial information, non-financial
+    information, general ledger transactions and regulatory filings such as
+    annual and quarterly accounting, tax and industry reports.
+			</p>
+		<h4>Basis of Presentation</h4> 
+		<p>
+The accompanying financial statements have been prepared on the accrual
+    basis of accounting in accordance with generally accepted accounting
+    principles. Net assets and revenues, expenses, gains, and losses are
+    classified based on the existence or absence of donor-imposed restrictions.
+    Accordingly, net assets of the Corporation and changes therein are
+    classified and reported as follows:
+			</p>
+			
+			<div class="notes-indent">
+		<p>
+				<span class="h5">Unrestricted Net Assets</span> Net assets that are not subject to donor-imposed stipulations are
+    classified as unrestricted net assets.
+</p>
+
+<p>
+				<span class="h5">Temporarily Restricted Net Assets</span> Net assets subject to donor-imposed stipulations that may or will be met,
+    either by actions of the Corporation and/or the passage of time are
+    classified as temporarily restricted net assets. When a restriction
+    expires, temporarily restricted net assets are reclassified to unrestricted
+    net assets and reported in the statement of activities as net assets
+    released from restrictions. When temporarily restricted net assets are
+    received and the restriction expires in the same reporting period, these
+    assets are classified as unrestricted. There were no temporarily restricted
+    net assets at June 30, 2018 and 2017.
+			</p>
+			
+			
+			<p> <span class="h5">Permanently Restricted Net Assets</span>
+    Net assets subject to donor-imposed stipulations that they be maintained
+    permanently by the Corporation are classified as permanently restricted net
+    assets. Generally, the donors of these assets permit the Corporation to use
+    all or part of the income earned on any related investments for general or
+    specific purposes. There were no permanently restricted net assets at June
+    30, 2018 and 2017.
+			</p>
+			</div>
+			
+		
+			 
+			<h4>Cash Equivalents</h4>
+            <p>
+    The Corporation considers money market funds and highly liquid
+    investments with maturities of three months or less to be cash equivalents.
+			</p>
+				<h4>Dues Receivable</h4>
+                <p>
+    Dues income is recognized as support and revenue during the applicable
+    membership period.
+        </p>
+        <p>
+    The Corporation uses the allowance method to determine uncollectible dues
+    and co-sponsorship conference fees receivable ("receivables"). The
+    Corporation periodically evaluates its receivables and establishes an
+    allowance for doubtful accounts based on its prior years' experience and
+    current credit considerations. Receivables are charged-off when management
+    believes the uncollectibility of the dues or fees is confirmed.
+			</p>
+			
+								{{ end }}
+		
+		</div>		 
+							
+					
+			<div class="page notes">
+			<h2 class="continued">XBRL International, Inc.<br />
+            Notes to Financial Statements<br />
+            Years Ended June 30, 2018 and 2017
+			</h2>
+			
+		        <h3 class="continued"><span class="note-number">NOTE 1</span>Nature of Organization and Summary of Significant Accounting: <span class="continued">(Continued)</span> </h3>
+				
+			{{ continue }}
+				 
+			
+			
+		
+		
+			
+            <h4>Equipment</h4>
+            <p>
+    Equipment is stated at cost less accumulated depreciation. Depreciation is computed on the straight-line method over the estimated useful lives of
+    the assets, which is three years for computer and office equipment.
+			</p>
+			
+		    <h4>Concentrations of Credit Risks</h4>
+            <p>
+    The Corporation closely monitors the extension of credit to the
+    membership while maintaining allowances for potential credit losses.
+    Membership is located in several countries throughout the world.
+            </p>
+            <p>
+    Financial instruments which potentially subject the Corporation to
+    significant concentrations of credit risk consist principally of cash and
+    equivalents with various financial institutions. These institutions are
+    located throughout the United States, and the Corporation’s policy is to
+    limit exposure to any one institution. At times, cash balances may exceed
+    insured limits.
+			</p>
+			
+		    <h4>Co-sponsorship Conference Fee Income</h4>
+            <p>
+    The Corporation co-sponsors conferences with international countries to
+    achieve networking, educational and outreach goals. The Corporation shares
+    revenue with the jurisdictional countries under various revenue splits.
+			</p>
+		
+            <h4>Unearned Dues and Deferred Conference Revenue</h4>
+            <p>
+    The Organization recognizes revenue in the period in which the related activity is performed. Accordingly, dues and
+    fees received in advance for the upcoming year are deferred until the
+    activity commences or the applicable membership period takes place.
+			</p>
+			
+		    <h4>Tax Exempt Status</h4>
+            <p>
+    The Corporation is a qualified tax-exempt organization under Section
+    501(c)(6) of the Internal Revenue Code and is exempt from Federal and State
+    income taxes.
+		</p><p>
+    The Corporation follows the accounting guidance for uncertain tax
+    positions, which clarifies the accounting and recognition for tax positions
+    taken or expected to be taken in its income tax returns. The Corporation
+    recognizes the tax benefits from uncertain tax positions only if it is more
+    likely than not that a tax position will be sustained on examination by the
+    taxing authorities, based on the technical merits of the position.
+			</p><p>
+    The Corporation has not incurred any interest or penalties related to
+    income tax expense during the year ended June 30, 2018 and 2017.
+			</p>
+			
+		    <h4>Use of Estimates</h4>
+            <p>
+    The preparation of financial statements in conformity with generally
+    accepted accounting principles requires estimates and assumptions to be
+    made that affect the reported amounts of assets and liabilities and
+    disclosure of contingent assets and liabilities at the date of the
+    financial statements and the reported amounts of revenues and expenses
+    during the reported period. Actual results could differ from those
+    estimates.
+			</p>
+				<h4>Currency Translation</h4>
+                <p>
+    Foreign currency transactions entered into by the Organization included
+    in the financial statements are translated into the functional currency,
+    U.S. Dollars (USD), at the exchange rate prevailing at the transaction
+    date. Monetary assets and liabilities are translated at the applicable
+    exchange rate at each reporting date.
+                </p>
+		
+                <h4>Date of Management’s Review</h4>
+				<p> 
+    In preparing the financial statements, management has evaluated events
+    and transactions for potential recognition or disclosure through September
+    28, 2018, the date the financial statements were available to be issued.
+			</p>
+			
+			
+		
+				 {{ end }}  
+				 </div>
+				 
+			<div class="page notes">
+			<h2 class="continued">XBRL International, Inc.<br />
+            Notes to Financial Statements<br />
+            Years Ended June 30, 2018 and 2017
+			</h2>
+			 
+		{{string us-gaap:PostemploymentBenefitsDisclosureTextBlock[period-type=duration] }}
+			<h3>
+				<a id="NF2">
+    <span class="note-number">Note 2</span>Retirement Plan:
+				</a>
+			</h3>
+		
+
+			<p>
+    The Corporation provides a Safe Harbor 401(k) Profit Sharing Plan which
+    covers all of the Corporation’s U.S. based employees. Employees become
+    eligible after attaining the age of twenty-one and providing twelve months
+    of service to the Corporation. Employees may contribute a portion of their
+    compensation subject to Internal Revenue Code limits.
+			</p>
+			<p>
+    The Corporation matches 100% of the employees’ contribution up to 3% of
+    compensation, plus 50% of the portion of the employee’s 401(k) contribution
+    between 3% and 6% of compensation.
+			</p>
+			<p>
+    For the years ended June 30, 2018 and 2017, the Corporation made matching
+    contributions to the plan in the amounts of $0 and $1,879, respectively.
+			</p>
+
+{{ end }} 
+			</div>
+			    
+
+	
+	</body>
+</html>

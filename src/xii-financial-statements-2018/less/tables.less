@@ -1,0 +1,83 @@
+table.accounts {
+    width: 100%;
+    border-collapse: collapse;
+    font-weight: 300;
+
+    thead th {
+        border-bottom: solid 3px #bdbdbc;
+        color: @primary;
+    }
+
+    td,th { 
+        padding: 4px 8px;
+        box-sizing: border-box;
+        height: 25px;
+    }
+
+    td.current, th.current {
+        background-color: #e9e9e9;
+    } 
+    th.figure {
+        text-align: right;
+    }
+    td.figure {
+        text-align: right;
+    }
+    tr.title td.label {
+        font-weight: bold;
+        color: @emph-text;
+    }
+    tr.section-title td.label {
+        font-weight: bold;
+        color: @emph-text;
+        text-transform: uppercase;
+    }
+    tr.movement td.label {
+        text-transform: uppercase;
+    }
+    tr.grand-total td {
+        /*border-top: solid 3px #bdbdbc; */
+        border-bottom: solid 3px #bdbdbc;
+        font-weight: bold;
+        color: @emph-text;
+    }
+    tr.underline td {
+        border-bottom: solid 1px #bdbdbc;
+    }
+    tr.indent td:first-child {
+        padding-left: 0.5cm;
+    }
+    tr.indent-2 td:first-child {
+        padding-left: 1cm;
+    }
+    tr.indent-3 td:first-child {
+        padding-left: 1.5cm;
+    }
+    tr.indent-4 td:first-child {
+        padding-left: 2.0cm;
+    }
+    tr.indent-5 td:first-child {
+        padding-left: 2.5cm;
+    }
+    tr.gap td {
+        height: 40px;
+        vertical-align: bottom;
+    }
+    tr.double-height td {
+        height: 40px;
+        vertical-align: top;
+    }
+    tr.gap.double-height td {
+        height: 55px;
+        vertical-align: middle;
+    }
+    tr.currency td.figure:before {
+        content: "$";
+    }
+}
+
+
+    
+
+
+

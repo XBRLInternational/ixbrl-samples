@@ -1,0 +1,35 @@
+
+
+.col-2 {
+    width: 100%;
+    &.col-2::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .col {
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+    }
+    .col:first-child {
+        padding-right: 15px;
+    }
+    .col:last-child {
+        padding-left: 15px;
+    }
+}
+
+@media only screen and (max-width: 230mm) {
+
+    .col-2 {
+        .col:first-child, .col:last-child {
+            float: none;
+            padding: 0;
+            max-width: 130mm;
+            width: initial;
+        }
+    }
+
+}

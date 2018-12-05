@@ -1,0 +1,228 @@
+@import "colours.less";
+
+@font-face {
+font-family: 'Gotham';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/GothamHTF-Book.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Gotham';
+font-style: normal;
+font-weight: 300;
+src: url('fonts/GothamLight.woff');
+}
+@import "responsive.less";
+
+body {
+  background-color: #555;
+  font-family: "Gotham";
+  margin: 0;
+  font-weight: 300;
+  counter-reset: page;
+}
+body, table {
+  font-size: 9pt;
+  line-height: 13pt;
+  color: @body-text;
+    
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.page {
+    width: 210mm;
+    height: 297mm;
+    background-color: white;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    box-sizing: border-box;
+    padding: 2cm 1.8cm 2cm 1.8cm;
+    overflow: hidden;
+    counter-increment: page;
+    box-sizing: border-box;
+    page-break-after: always;
+    
+
+    &:not(.cover-page):not(.audit-report) {
+        background-image: url(img/xii-header.png), url(img/xii-footer.png), url(img/xii-logo.svg);
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-position: left top, left bottom, 90% 40px;
+        background-size: 100%, 100%, 50px auto;
+
+        .responsive-small({
+            background-image: url(img/xii-header.png);
+            background-repeat: no-repeat;
+            background-position: left top;
+            background-size: 100%;
+            
+        });
+        &:after {
+            position: absolute;
+            font-weight: normal;
+            bottom: 9px;
+            right: 2cm;
+            content: counter(page);
+            color: @primary;
+            .responsive-small({
+                display: none;
+            })
+        }
+    }
+
+    .see-notes {
+        position: absolute;
+        left: 1.8cm;
+        bottom: 1.5cm;
+        .responsive-small({
+            bottom: 0.8cm;
+        });
+    }
+
+}
+
+.page.audit-report {
+    background-image: url("img/curchin.jpg");
+    background-position: 1.8cm 1.8cm;
+    background-size: 150px auto;
+    background-repeat: no-repeat;
+    
+    h2, h3 { color: @body-text; }
+    padding-top: 4.3cm;
+    .responsive-small({
+        border-top: solid 1px @body-text;
+    });
+
+    .auditors {
+        margin-top: 3cm;
+        .name {
+            font-weight: bold;
+        }
+    }
+}
+
+h1, h2, h3, h4 {
+    color: @primary;
+    //font-family: "GothamHTF-Book";
+    font-weight: normal;
+}
+
+
+h2 {
+    font-size: 20pt;
+}   
+
+h3 {
+    font-size: 10pt;
+    margin-bottom: 0;
+}
+
+span.h5 {
+    font-weight: normal;
+    display: inline;
+    font-size: 9pt;
+    &:after {
+        content: " - ";
+        font-weight: 300;
+    }
+}
+p {
+    margin-top: 0;
+}
+
+.addressee {
+    margin: 10pt 0;
+    color: black;
+    font-weight: bold;
+    p {
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+.page.contents {
+    padding: 9cm 2cm 0 7cm;
+    .responsive-small({
+        padding: 2cm 1.8cm 2cm 1.8cm;
+    });
+    h2 {
+        font-weight: normal;
+        font-size: 22pt;
+        margin-bottom: 1.2cm;
+    }
+    table {
+        width: 100%;
+        font-size: 12pt;
+        border-collapse: collapse;
+        font-weight: 300;
+        
+        td {
+            border-bottom: solid 1px @primary;
+            padding: 6px 0;
+        }
+        td:last-child {
+            text-align: right;
+            .responsive-small({
+                display: none;
+            });
+        }
+    }
+
+}
+
+p.period-subtitle {
+    font-size: 11pt;
+    color: @emph-text;
+}
+
+
+
+.responsive-small({
+    body {
+        -webkit-text-size-adjust: none;
+        background-color: #fff;
+    }
+    .page {
+        width: 100%;
+        height: initial;
+        margin: 0;
+        min-height: 4cm;
+    }
+    .continued {
+        display:none;
+    }
+});
+
+
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important; /*Chrome, Safari */
+        color-adjust: exact !important;  /*Firefox*/
+      }
+    @page {
+        margin: 0;
+    }
+    .page {
+        margin: 0;
+        width: 210mm;
+        height: 297mm;
+    }
+}
+
+
+@import "tables.less";
+@import "cover-page.less";
+@import "notes.less";
