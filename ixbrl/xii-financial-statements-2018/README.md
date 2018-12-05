@@ -12,4 +12,7 @@ On larger screens, the stylesheet recreates the pagination that is familiar in P
 
 The stylesheet also include print-specific CSS to map the pagination shown on screen to physical pages.  Using "Print to PDF" in the Chrome will create a quality PDF version of the report.  Wherever possible, Scalable Vector Graphics (SVG) have been used to avoid the lower quality resulting from scaling bitmap images in print format.
 
-It's worth noting that the signed, audited PDF document that can be found on the XBRL International website was produced from the iXBRL, not the other way around.
+It's worth noting that the [signed, audited PDF](signed-accounts) document that can be found on the XBRL International website was produced from the iXBRL, not the other way around.
+
+[signed-accounts]: http://www.xbrl.org/governingdocuments-archive/financial-statements/2018/xii-financial-statements-2018.pdf
+
