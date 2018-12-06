@@ -31,5 +31,6 @@ The samples are created using a simple templating system, and CSS files prepared
 preprocessor.  The source from which these files are built can be found the 
 [src directory](https://github.com/XBRLInternational/ixbrl-samples/tree/master/src)
 
+_We will be publishing more details on the templating system used to produce these samples very shortly_
 
 
