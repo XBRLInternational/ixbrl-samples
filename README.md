@@ -1,5 +1,7 @@
 # iXBRL sample documents
 
+**This repository has moved to https://gitlab.xbrl.org/xii/ixbrl-samples**
+
 This repository contains a number of Inline XBRL (or
 [iXBRL](https://www.xbrl.org/ixbrl)) sample documents created by [XBRL
 International](https://www.xbrl.org).
@@ -17,20 +19,3 @@ documents (and PDFs).
 As well as including the final iXBRL documents, this repository includes
 documentation on how these samples were prepared, and the source from which
 they were generated (see [iXBRL creation](#ixbrl-creation))
-
-## Samples
-
-The repository includes the following samples:
-
-* [GLEIF Annual Report 2017](https://github.com/XBRLInternational/ixbrl-samples/tree/master/ixbrl/gleif-annual-report-2017)
-* [XBRL International Financial Statements 2018](https://github.com/XBRLInternational/ixbrl-samples/tree/master/ixbrl/xii-financial-statements-2018)
-
-## Source
-
-The samples are created using a simple templating system, and CSS files prepared using the less CSS
-preprocessor.  The source from which these files are built can be found the 
-[src directory](https://github.com/XBRLInternational/ixbrl-samples/tree/master/src)
-
-_We will be publishing more details on the templating system used to produce these samples very shortly_
-
-
